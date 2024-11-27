@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <!-- font awesome cdn link -->
+      <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin</title>
+</head>
+<body>
+    <section class="flex font-poppins">
+        <!-- ---------------------sidebar-------------------- -->
+        <section class="menu_bar lg:w-[23%] lg:sticky fixed top-0 left-[-120%] w-[75%]  shadow-lg lg:shadow-none z-[1000000000]  lg:block h-[100vh] overflow-y-auto  no-scrollbar bg-white border-r-[1px] border-[#eee] p-[15px]">
+                 <div class="w-full flex mb-[40px] justify-end items-center">
+                    <div id="menu_btn" class="w-[40px] cursor-pointer h-[40px] bg-[#151A2D] text-white rounded-[10px] flex justify-center items-center">
+                        <i class="fa-solid fa-greater-than"></i>
+                    </div>
+                 </div>  
+                 <nav class="font-bangla_font">
+                    <ul>
+                        <li class="link1 text-black hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px] flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer">
+                            <i class="fa-regular fa-id-card"class="text-[35px]"></i>
+                            <span class="text-[13px] font-[600]">সাইন কপি টু এনআইডি</span>
+                        </li>
+                        <li class="link2 text-black flex justify-start items-center px-[15px] hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer">
+                               <i class="fa-regular fa-copy"></i>
+                            <span class="text-[15px] font-[600]">অটো সার্ভার কপি</span>
+                        </li>
+                        <li class="link3 text-black flex justify-start items-center hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px] px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer">
+                            <i class="fa-regular fa-id-badge"></i>
+                            <span class="text-[15px] font-[600]">জন্ম নিবন্ধন মেইক</span>
+                        </li>
+                        <li class="link4 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px] text-[23px] cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="text-[15px] font-[600]">অর্ডার করুন</span>
+                        </li>
+                        <li class="link5 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                            <i class="fa-solid fa-cash-register"></i>
+                            <span class="text-[15px] font-[600]">mhtml টু এনআইডি</span>
+                        </li>
+                        <li class="link6 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                            <i class="fa-solid fa-list"></i>
+                            <span class="text-[15px] font-[600]">ভোটার লিষ্টের তথ্য অনুসন্ধান</span>
+                        </li>
+                        <li class="link7 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                            <i class="fa-solid fa-mobile-retro"></i>
+                            <span class="text-[14px] font-[600]">রিচার্জ করুন</span>
+                        </li>
+                        <li class="link8 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                            <i class="fa-regular fa-file"></i>
+                            <span class="text-[14px] font-[600]">ফাইল লিস্ট</span>
+                        </li>
+                        <li class="link9 text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                           <a href="https://chat.whatsapp.com/JGylRvtAsZcEA7iSWXC4DB"target="_blank"> <i class="fa-solid fa-group-arrows-rotate"></i>
+                            <span class="text-[14px] font-[600]">গ্রুপ: Esservice2</span></a>
+                        </li>
+                        <li class="text-black flex justify-start items-center px-[15px] py-[12px] mb-[12px] gap-[15px] text-[23px] cursor-pointer hover:bg-[#26de81] hover:text-white transition-all duration-150 rounded-[5px]">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="text-[14px] font-[600]">লগআউট করুন</span>
+                        </li>
+                    </ul>
+                 </nav>
+        </section>
+       <!-- ---------------------------box1 side---------------------- -->
+        <section class="mbox1 box1 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+            <section class=" w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0  transition-all duration-200 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div class="menu_btn text-[35px] lg:hidden cursor-pointer">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                        <div>
+                            <div class="flex justify-center items-center mt-[20px]">
+                                <div class="border-[2px] relative border-dashed text-[60px] text-[#45aaf2] cursor-pointer border-[#45aaf2] w-[250px] h-[180px] flex justify-center items-center">
+                                    <input type="file" class="w-full h-[100%] cursor-pointer absolute top-0 left-0 opacity-0">
+                                    <div class="text-center">
+                                        <i class="fa-regular fa-file"></i>
+                                        <h2 class="text-[17px] font-[600] text-main_color">সাইন কপি আপলোড করুন</h2>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                                <ul  class="flex justify-center items-center mt-[15px] gap-[20px]">
+                                    <li class="flex justify-center items-center gap-[8px]">
+                                        <input type="radio"name="type" class="w-[15px] h-[15px] cursor-pointer">
+                                        <span>Type A </span>
+                                    </li>
+                                    <li class="flex justify-center items-center gap-[8px]">
+                                        <input type="radio"name="type" class="w-[15px] h-[15px] cursor-pointer">
+                                        <span>Type B </span>
+                                    </li>
+                                    <li class="flex justify-center items-center gap-[8px]">
+                                        <input type="radio"name="type" class="w-[15px] h-[15px] cursor-pointer">
+                                        <span>Type C</span>
+                                    </li>
+                                </ul>
+                        </div>
+                        <!------------------------------upload photo------------------ -->
+                        <section class="flex font-poppins mt-[30px] gap-[30px] border-[1px] p-[20px] border-dashed border-[#dfe4ea]">
+                            <form action=""class="w-[100%]">
+                                <div class="flex justify-between items-center gap-[50px]">
+                               <div class="w-[130px] lg:w-[150px] h-[130px] lg:h-[150px] flex justify-center items-center relative border-2 border-gray-300 border-dashed rounded-[50%]" id="dropzone">
+    <input type="file" class="absolute inset-0 w-full h-full opacity-0 z-50" />
+    <div class="text-center">
+        <img class="mx-auto h-12 w-[30px] lg:w-[70px]" src="https://www.svgrepo.com/show/357902/image-upload.svg" alt="">
+
+        <h3 class="mt-[4px] lg:mt-2 text-sm font-medium text-gray-900">
+            <label for="file-upload" class="relative cursor-pointer">
+                <span class="text-indigo-600 text-[12px] lg:text-[15px]">Upload Photo</span>
+                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+            </label>
+        </h3>
+      
+    </div>
+
+    <img src="" class="mt-4 mx-auto max-h-40 hidden" id="preview">
+                                  </div>
+                                     <div class="w-[130px] h-[130px] lg:w-[150px] lg:h-[150px] flex justify-center items-center relative border-2 border-gray-300 border-dashed rounded-[50%]" id="dropzone">
+    <input type="file" class="absolute inset-0 w-full h-full opacity-0 z-50" />
+    <div class="text-center">
+        <img class="mx-auto h-12 w-[30px] lg:w-[70px]" src="https://www.svgrepo.com/show/357902/image-upload.svg" alt="">
+
+        <h3 class="mt-[4px] lg:mt-2 text-sm font-medium text-gray-900">
+            <label for="file-upload" class="relative cursor-pointer">
+                <span class="text-indigo-600 lg:text-[15px] text-[12px]">Upload Sign</span>
+                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+            </label>
+        </h3>
+      
+    </div>
+
+                    <img src="" class="mt-4 mx-auto max-h-40 hidden" id="preview">
+                                  </div>
+                                </div>
+                                <section class="flex gap-[30px] w-full lg:flex-row flex-col ">
+                                    <div class="w-[100%] lg:w-[50%]">
+                                        
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">নাম (বাংলা )</label> <br>
+                                            <input type="text"placeholder="নাম (বাংলা )"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিতার নাম</label> <br>
+                                            <input type="text"placeholder="পিতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">এনআইডি নম্বর</label> <br>
+                                            <input type="text"placeholder="এনআইডি নম্বর"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্ম তারিখ </label> <br>
+                                            <input type="text"placeholder="জন্ম তারিখ "class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">রক্তের গ্রুপ</label> <br>
+                                            <input type="text"placeholder="রক্তের গ্রুপ"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                      </div>
+                                      <div class="w-[100%] lg:w-[50%]">
+                                 
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px] ">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">
+                                                নাম (ইংরেজী)</label> <br>
+                                            <input type="text"placeholder="নাম (ইংরেজী)"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">মাতার নাম</label> <br>
+                                            <input type="text"placeholder="মাতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিন নম্বর</label> <br>
+                                            <input type="text"placeholder="পিন নম্বর"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্ম ঠিকানা</label> <br>
+                                            <input type="text"placeholder="জন্ম ঠিকানা"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">প্রদানের ঠিকানা</label> <br>
+                                            <input type="date"placeholder="Enter your name"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                      </div>
+                                </section>
+                                    <div class="mt-[15px]">
+                                        <label for="" class="text-[17px] font-bangla_font2 font-[600]">ঠিকানা</label>
+                                        <textarea name="" id=""class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[120px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full"></textarea>
+                                    </div>
+                                    <p class="text-[12px]">Full Address: ঠিকানা: বাসা/হোল্ডিং: (Holding), গ্রাম/রাস্তা: (গ্রাম, মৌজা), ডাকঘর: (Post Office - Postal Code), উপজেলা, সিটি কর্পোরেশন/পৌরসভা, জেলা</p>
+                                         <button class="px-[30px] py-[12px] bg-[#27AE60] text-white cursor-pointer block mt-[15px] rounded-[5px] m-auto ">Submit 4 TK</button>
+                                </form>
+                        </section>
+                        <!------------------------------upload photo------------------ -->
+               </section>
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+        <!-- -----------------box3--------------------- -->
+         <section class="mbox2 active_box box2 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+        <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div class="menu_btn text-[35px] lg:hidden cursor-pointer">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div  class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                  <!-- ====================form------------------------ -->
+                       <section class="mt-[30px] flex justify-center gap-[30px] lg:flex-row flex-col">
+                          <div class="w-[100%] lg:w-[40%] bg-white p-[20px] rounded-[5px] shadow-lg border-[1px] border-[#eee]">
+                            <h1 class="text-center text-[20px] font-[700] mb-[20px]">সার্ভার কপি 6 টাকা কাটবে!</h1>
+                               <form action="">
+                                <div class="mb-[15px]">
+                                    <label for="" class="text-[18px] font-medium">এনইডি নম্বর <span class="text-red-500">*</span> </label><br>
+                                    <input type="text"placeholder="4243545"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                    <div class="mb-[15px]">
+                                    <label for=""class="text-[18px] font-medium">জন্ম তারিখ <span>*</span> </label><br>
+                                    <input type="text"placeholder="DD-MM-YY"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                <button class="w-full h-[50px] text-[18px] text-white rounded-[5px] bg-[#27ae60]">Save & Download</button>
+                               </form>
+                          </div>
+                           <div class="w-[100%] lg:w-[40%] bg-white p-[20px] rounded-[5px] shadow-lg border-[1px] border-[#eee]">
+                            <h1 class="text-center text-[20px] font-[700] mb-[20px]">সার্ভার কপি 10 টাকা কাটবে!</h1>
+                               <form action="">
+                                <div class="mb-[15px]">
+                                    <label for="" class="text-[18px] font-medium">এনইডি নম্বর <span class="text-red-500">*</span> </label><br>
+                                    <input type="text"placeholder="4243545"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                    <div class="mb-[15px]">
+                                    <label for=""class="text-[18px] font-medium">জন্ম তারিখ <span>*</span> </label><br>
+                                    <input type="text"placeholder="DD-MM-YY"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                <button class="w-full h-[50px] text-[18px] text-white rounded-[5px] bg-[#27ae60]">Save & Download</button>
+                               </form>
+                          </div>
+                       </section>
+                  <!-- ====================form------------------------ -->
+               </section>
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+           <!-- -----------------box3--------------------- -->
+         <section class="active_box box3 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+         <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div  class="menu_btn text-[35px] lg:hidden cursor-pointer">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                 <!-- ---------------------জন্ম নিবন্ধন মেইক------------------ -->
+                   <section class="mt-[20px]">
+                    <div class="w-[100%] lg:w-[40%] m-auto bg-white p-[20px] rounded-[5px] shadow-lg border-[1px] border-[#eee]">
+                            <h1 class="text-center text-[25px] font-[700] mb-[20px]">জন্ম নিবন্ধন মেইক</h1>
+                               <form action="">
+                                <div class="mb-[15px]">
+                                    <label for="" class="text-[18px] font-medium">জন্ম নিবন্ধন নম্বর <span class="text-red-500">*</span> </label><br>
+                                    <input type="text"placeholder="4243545"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                    <div class="mb-[15px]">
+                                    <label for=""class="text-[18px] font-medium">জন্ম তারিখ <span>*</span> </label><br>
+                                    <input type="text"placeholder="DD-MM-YY"class="border-[1px] border-neutral-300 mt-[6px] outline-none rounded-[5px] tracking-[2px] p-[15px] w-full h-[50px]">
+                                </div>
+                                <div class="w-full mb-[15px]">
+                                    <label for=""class="text-[18px] font-medium">Captcha</label> <br>
+                                 <div class="w-full flex relative mt-[6px]">
+                                    <input type="text"placeholder="Captcha"class="w-[70%] h-[50px] border-[1px] p-[15px] border-r-[0px] border-neutral-300 rounded-[5px] outline-none rounded-r-[0px]">
+                                    <button class="absolute top-0 right-0 w-[30%] text-[15px] text-white h-[50px] bg-[#27ae60] rounded-r-[5px]">Get Captcha</button>
+                                 </div>
+                                </div>
+                                <button class="w-full h-[50px] text-[18px] text-white rounded-[5px] bg-[#27ae60]">Get Info</button>
+                               </form>
+                          </div>
+                   </section>
+                 <!-- --------------------------জন্ম নিবন্ধন মেইক------------ -->
+               </section>
+               <!-- ---------------------------form----------------- -->
+                <section class="flex font-poppins mt-[5px] gap-[10px] lg:gap-[30px] p-[10px] lg:p-[20px] ">
+                               <section class="border-[1px] p-[10px] lg:p-[20px] border-dashed border-[#dfe4ea] w-full ">
+                                 <form action=""class="w-[100%]">
+                                <section class="flex gap-[30px] w-full md:flex-row flex-col">
+                                    <div class="w-[100%] lg:w-[50%]">
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">রেজিষ্টার অফিসের নাম <span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="রেজিষ্টার অফিসের নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Birth Registration Number <span class="text-red-[500]">*</span> </label> <br>
+                                            <input type="text"placeholder="Birth Registration Number"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Date of Registration<span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="Date of Registration"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্ম তারিখ  <span class="text-red-[500]">*</span> </label> <br>
+                                            <input type="text"placeholder="জন্ম তারিখ "class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Date of Birth in Word (Optional)</label> <br>
+                                            <input type="text"placeholder="জন্ম তারিখ "class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           
+                                      </div>
+                                      <div class="w-[100%] lg:w-[50%]">
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px] ">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Upazila/Pourashava/City Corporation, Zila</label> <br>
+                                            <input type="text"placeholder="নাম (ইংরেজী)"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Left Bar Code</label> <br>
+                                            <input type="text"placeholder="মাতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Date of Issuance</label> <br>
+                                            <input type="text"placeholder="পিন নম্বর"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Gender</label> <br>
+                                            <input type="text"placeholder="জন্ম ঠিকানা"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+
+                                      </div>
+                                </section>
+                                <section class="flex gap-[30px] w-full lg:flex-row flex-col">
+                                    <div class="w-[100%] lg:w-[50%]">
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">নাম<span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিতার নাম <span class="text-red-[500]">*</span> </label> <br>
+                                            <input type="text"placeholder="পিতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিতার জাতীয়তা<span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="পিতার জাতীয়তা"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">মাতার নাম  <span class="text-red-[500]">*</span> </label> <br>
+                                            <input type="text"placeholder="মাতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">মাতার জাতীয়তা</label> <br>
+                                            <input type="text"placeholder="মাতার জাতীয়তা"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                                <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্মস্থান</label> <br>
+                                            <input type="text"placeholder="জন্মস্থান"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           
+                                      </div>
+                                      <div class="w-[100%] lg:w-[50%]">
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px] ">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Name</label> <br>
+                                            <input type="text"placeholder="Full Name in English"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Father Name</label> <br>
+                                            <input type="text"placeholder="Father Name in English"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Father Nationality</label> <br>
+                                            <input type="text"placeholder="Father Nationality"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Mother Name</label> <br>
+                                            <input type="text"placeholder="Mother Name"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+ <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Mother Nationality</label> <br>
+                                            <input type="text"placeholder="Mother Nationality"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                            <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">Place of Birth</label> <br>
+                                            <input type="text"placeholder="Place of Birth"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                      </div>
+                                </section>
+                                    <div class="mt-[15px]">
+                                        <label for="" class="text-[17px] font-bangla_font2 font-[600]">স্থায়ী ঠিকানা(বাংলা)</label>
+                                        <textarea name="" id=""placeholder="গ্রামঃ বনচিথলিয়া, ডাকঘরঃ মাদারগঞ্জ - ২০৪০, মাদারঞ্জ পৌরসভা, মাদারঞ্জ, জামালপুর" class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[120px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full"></textarea>
+                                    </div>
+                                     <div class="mt-[15px]">
+                                        <label for="" class="text-[17px] font-bangla_font2 font-[600]">Permanent Address (English)</label>
+                                        <textarea name="" placeholder="Village: Bonchitholiy, Post Office: Madarganj - 2040, Madarganj Paurasabha, Madarganj, Jamalpur" id=""placeholder="গ্রামঃ বনচিথলিয়া, ডাকঘরঃ মাদারগঞ্জ - ২০৪০, মাদারঞ্জ পৌরসভা, মাদারঞ্জ, জামালপুর" class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[120px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full"></textarea>
+                                    </div>
+                                         <button class="px-[30px] py-[12px] bg-[#27ae60] text-white cursor-pointer block mt-[15px] rounded-[5px] m-auto ">Submit 10 TK</button>
+                                </form>
+                               </section>
+                 </section>
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+               <!-- -----------------box4--------------------- -->
+         <section class="active_box box4 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+           <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div class="menu_btn text-[35px] lg:hidden cursor-pointer">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                 <!-- ---------------------জন্ম নিবন্ধন মেইক------------------ -->
+                   <section class="mt-[20px]">
+                       <div class="bg-white border-[1px] border-[#eee] p-[20px] rounded-[5px] h-auto">
+                              <h1 class="font-bangla_font2 text-[20px] font-[600] mb-[15px]">অপশন সিলেক্ট করুনঃ</h1>
+                               <section class="grid grid-cols-2 gap-[15px]">
+                                  <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">এনআইডি 70 টাকা</label>
+                                  </div>
+                                  <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">সার্ভার কপি 20 টাকা</label>
+                                  </div>
+                                   <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">সাইন কপি 65 টাকা</label>
+                                  </div>
+                                        <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">জিপি নাম্বার টু বায়োমের্ট্রিক 120 টাকা</label>
+                                  </div>
+                                      <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">বাংলালিক নাম্বার টু বায়োমের্ট্রিক 90 টাকা</label>
+                                  </div>
+                                         <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">এয়ারটেল নাম্বার টু বায়োমের্ট্রিক 140 টাকা</label>
+                                  </div>
+                                          <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">রবি নাম্বার টু বায়োমের্ট্রিক 140 টাকা</label>
+                                  </div>
+                                   <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">টেলিটক নাম্বার টু বায়োমের্ট্রিক 120 টাকা</label>
+                                  </div>
+                                     <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">এনআইডি টু টিন সার্টিফিকেট 50 টাকা</label>
+                                  </div>
+                                    <div class="border-[1px] border-neutral-300 p-[15px] flex justify-start items-center gap-[10px] rounded-[5px]">
+                                    <input type="radio"class="w-[20px] h-[20px]">
+                                    <label for=""class="text-[14px] lg:text-[16px] font-[600]">ইউজার পাসওয়ার্ড সেট 70 টাকা</label>
+                                  </div>
+                               </section>
+                               <section>
+                                <form action="">
+                                      <div class="mt-[15px]">
+                                            <label for=""class="text-[18px] font-bangla_font2 font-[600]">নাম্বার <span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="নাম্বার"class="border-[1px] border-[#eee] p-[14px] text-[18px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                            <div class="mt-[15px]">
+                                            <label for=""class="text-[18px] font-bangla_font2 font-[600]">ব্যাক্তির নাম <span class="text-red-[500]">*</span></label> <br>
+                                            <input type="text"placeholder="ব্যাক্তির নাম"class="border-[1px] border-[#eee] p-[14px] text-[18px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                         <button class="px-[30px] py-[12px] w-full bg-[#27ae60] text-white cursor-pointer block mt-[15px] rounded-[5px] m-auto text-[18px]">Confirm</button>
+                                </form>
+                               </section>
+                            </div>
+                   </section>
+                   <!-- -----------------------table --------------- -->
+                    <section class="mt-[20px]">                 
+<div class="relative overflow-x-auto border-[1px] border-[#eee]">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-[17px]">
+                   Service
+                </th>
+                <th scope="col" class="px-6 py-3 text-[17px]">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3 text-[17px]">
+                    ID
+                </th>
+                <th scope="col" class="px-6 py-3 text-[17px]">
+                  Date	
+                </th>
+                
+                  <th scope="col" class="px-6 py-3 text-[17px]">
+                  Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[17px]">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 text-nowrap font-medium text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[17px] text-nowrap">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[17px] text-nowrap">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[17px] text-nowrap">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right text-nowrap">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[17px]">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                    </section>
+                 <!-- --------------------------জন্ম নিবন্ধন মেইক------------ -->
+               </section>
+             
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+        <!-- ----------------box5------------------- -->
+           <section class="active_box box5 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+            <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div  class="menu_btn text-[35px] lg:hidden cursor-pointer"id="menu">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                        <div>
+                            <div class="flex justify-center items-center mt-[20px]">
+                                <div class="border-[2px] relative border-dashed text-[60px] text-[#45aaf2] cursor-pointer border-[#45aaf2] w-[250px] h-[180px] flex justify-center items-center">
+                                    <input type="file" class="w-full h-[100%] cursor-pointer absolute top-0 left-0 opacity-0">
+                                    <div class="text-center">
+                                        <i class="fa-regular fa-file"></i>
+                                        <h2 class="text-[17px] font-[600] text-main_color">mhtml file আপলোড করুন</h2>
+                                    </div>
+                                </div>
+                               
+                            </div>
+              
+                        </div>
+                        <!------------------------------upload photo------------------ -->
+                        <section class="flex font-poppins mt-[30px] gap-[30px] border-[1px] p-[20px] border-dashed border-[#dfe4ea]">
+                            <form action=""class="w-[100%]">
+                                <section class="flex gap-[30px] w-full lg:flex-row flex-col">
+                                    <div class="w-[100%] lg:w-[50%]">
+                 
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">নাম (বাংলা )</label> <br>
+                                            <input type="text"placeholder="নাম (বাংলা )"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিতার নাম</label> <br>
+                                            <input type="text"placeholder="পিতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">এনআইডি নম্বর</label> <br>
+                                            <input type="text"placeholder="এনআইডি নম্বর"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্ম তারিখ </label> <br>
+                                            <input type="text"placeholder="জন্ম তারিখ "class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">রক্তের গ্রুপ</label> <br>
+                                            <input type="text"placeholder="রক্তের গ্রুপ"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                      </div>
+                                      <div class="w-[100%] lg:w-[50%]">
+                                   
+                                          <!-- -------------------------input filed----- -->
+                                           <div class="mt-[15px] ">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">
+                                                নাম (ইংরেজী)</label> <br>
+                                            <input type="text"placeholder="নাম (ইংরেজী)"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">মাতার নাম</label> <br>
+                                            <input type="text"placeholder="মাতার নাম"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">পিন নম্বর</label> <br>
+                                            <input type="text"placeholder="পিন নম্বর"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">জন্ম ঠিকানা</label> <br>
+                                            <input type="text"placeholder="জন্ম ঠিকানা"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                           <div class="mt-[15px]">
+                                            <label for=""class="text-[16px] font-bangla_font2 font-[600]">প্রদানের ঠিকানা</label> <br>
+                                            <input type="date"placeholder="Enter your name"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[45px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                      </div>
+                                </section>
+                                    <div class="mt-[15px]">
+                                        <label for="" class="text-[17px] font-bangla_font2 font-[600]">ঠিকানা</label>
+                                        <textarea name="" id=""class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[120px] text-[14px] outline-main_color mt-[5px] rounded-[5px] w-full"></textarea>
+                                    </div>
+                                    <p class="text-[12px]">Full Address: ঠিকানা: বাসা/হোল্ডিং: (Holding), গ্রাম/রাস্তা: (গ্রাম, মৌজা), ডাকঘর: (Post Office - Postal Code), উপজেলা, সিটি কর্পোরেশন/পৌরসভা, জেলা</p>
+                                         <button class="px-[30px] py-[12px] bg-[#27AE60] text-white cursor-pointer block mt-[15px] rounded-[5px] m-auto ">Submit</button>
+                                </form>
+                        </section>
+                        <!------------------------------upload photo------------------ -->
+               </section>
+             <!-- ------------------------------first tab--------------------- -->
+           </section>
+                <!-- ----------------box6------------------- -->
+           <section class="active_box box6 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+             <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div class="menu_btn text-[35px] lg:hidden cursor-pointer">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                        <form action="">
+                            <div class="flex justify-center items-center mt-[20px]">
+                                <div class="border-[2px] relative border-dashed text-[60px] text-[#45aaf2] cursor-pointer border-[#45aaf2] w-[250px] h-[180px] flex justify-center items-center">
+                                    <input type="file" class="w-full h-[100%] cursor-pointer absolute top-0 left-0 opacity-0">
+                                    <div class="text-center">
+                                        <i class="fa-regular fa-file"></i>
+                                        <h2 class="text-[17px] font-[600] text-main_color">ভোটার লিস্ট আপলোড করুন</h2>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                             <div class=" m-auto mt-[10px] w-[90%] md:w-[60%] lg:w-[40%] h-[55px] rounded-[5px] flex justify-center items-center">
+                                 <select name="" id=""class="w-[30%] h-[100%] outline-none p-[10px] bg-[#27AE60] text-white text-[19px] font-[600]">
+                                    <option value="নাম">নাম</option>
+                                    <option value="পিতার নাম">পিতার নাম</option>
+                                    <option value="মাতার নাম">মাতার নাম</option>
+                                    <option value="ভোটার নং">ভোটার নং</option>
+                                    <option value="ভোটার নং">জন্ম তারিখ</option>
+                                 </select>
+                                 <input type="text"placeholder="Mijan"class="border-[2px] border-r-none border-[#eee]  px-[15px] text-[17px] text-neutral-600 w-[70%] h-[100%] text-[18px] outline-none bg-transparent">
+                             </div>
+                                         <button class="w-auto px-[30px] py-[12px] bg-[#27ae60] text-white cursor-pointer block mt-[15px] rounded-[5px] m-auto text-[18px]">অনুসন্ধান করুন</button>
+
+                        </form>
+                 
+                      
+               </section>
+             <!-- ------------------------------first tab--------------------- -->
+           </section>
+           <!-- -----------------box7--------------------- -->
+         <section class="active_box box7 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+    <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div  class="menu_btn text-[35px] lg:hidden cursor-pointer"id="menu">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-full p-[20px] font-bangla_font2 pb-[50px]">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                  <!-- ====================form------------------------ -->
+                       <section class="mt-[30px] flex justify-center gap-[30px]">
+                          <div class="w-[100%] md:w-[80%] lg:w-[40%] bg-white p-[20px] rounded-[5px] shadow-lg border-[1px] border-[#eee]">
+                            <h1 class="text-center text-[20px] font-[700] mb-[20px]">অটো পেমেন্ট করুন</h1>
+                               <form action="">
+                                     <div class="mt-[15px] ">
+                                            <label for=""class="text-[18px] font-bangla_font2 font-[600]">Balance</label> <br>
+                                            <input type="text"placeholder="Enter balance amount"class="border-[1px] border-[#eee] p-[14px] placeholder-neutral-600 h-[50px] text-[14px] outline-main_color text-[18px] mt-[5px] rounded-[5px] w-full">
+                                           </div>
+                                <button class="w-full h-[50px] text-[18px] text-white rounded-[5px] bg-[#27ae60] mt-[15px]">Submit</button>
+                               </form>
+                          </div>
+               
+                       </section>
+                  <!-- ====================form------------------------ -->
+               </section>
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+                <!-- -----------------box8--------------------- -->
+         <section  class="active_box box8 w-[100%] lg:w-[77%] h-[100vh] overflow-y-auto">
+            <!-- ----------------------header--------------------- -->
+          <section class="w-full h-[12vh] sticky z-[10000] bg-white shadow-sm top-0 left-0 flex lg:justify-end justify-between px-[15px] items-center gap-[20px] border-b-[1px] border-[#eee] border-dashed">
+                 <!-- ------------menu----------- -->
+                  <div  class="menu_btn text-[35px] lg:hidden cursor-pointer"id="menu">
+                       <i class='bx bx-menu-alt-left' ></i>
+                 </div>
+                <!-- ------------menu----------- -->
+             <section class="flex justify-center items-center gap-[20px]">
+                   <div class="px-[15px] h-[40px] relative flex justify-center items-center text-[20px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="absolute top-[-22%] flex justify-center items-center border-[1px] border-white text-white right-[-10%] text-[14px] bg-[#4b7bec] w-[27px] h-[27px] rounded-full">
+                        0
+                    </div>
+                </div>
+                <div class="px-[10px] h-[40px] flex justify-center items-center text-[18px] bg-[#45aaf2] rounded-[5px] text-white cursor-pointer">
+                  <span>0 ৳</span>   
+                </div>
+                <div class="p-[2px] border-[2px] border-[#eee] rounded-full">
+                    <img class="w-[40px] rounded-full" src="https://ekseba.my.id/assets/img/profile/user-1.jpg" alt="">
+                </div>
+             </section>
+            </section>
+            <!-- ----------------------header--------------------- -->
+             <!-- ------------------------------first tab--------------------- -->
+               <section class="w-[100%] p-[20px] font-bangla_font2 pb-[50px]  ">
+                        <div class="w-full px-[20px] py-[15px] border-[1px] border-[#eee] bg-white rounded-[5px]">
+                            <h1 class="text-[18px] font-[600]">কাজ চালু</h1>
+                        </div>
+                       <div class="w-full px-[20px] py-[15px]  bg-white rounded-[5px]">
+                            <h1 class="text-[17px] md:text-[19px] lg:text-[25px] font-[600] text-center text-[#27AE60]">ফাইল লিস্ট রাত ১১ টার পার ডিলিট করা হবে।</h1>
+                        </div>
+                   <!-- -----------------------table --------------- -->
+                    <section class="mt-[20px] w-full">                 
+<div class="relative overflow-x-auto border-[1px] border-[#eee]">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-[14px[ lg:text-[17px]">
+                   Service
+                </th>
+                <th scope="col" class="px-6 py-3 text-[14px[ lg:text-[17px]">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3 text-[14px[ lg:text-[17px]">
+                    ID
+                </th>
+                <th scope="col" class="px-6 py-3 text-[14px[ lg:text-[17px]">
+                  Date	
+                </th>
+                
+                  <th scope="col" class="px-6 py-3 text-[14px[ lg:text-[17px]">
+                  Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-nowrap text-[14px[ lg:text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[14px[ lg:text-[17px] text-nowrap">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[14px[ lg:text-[17px] text-nowrap">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[14px[ lg:text-[17px] text-nowrap">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right text-nowrap">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[17px]">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-[17px] text-gray-900 whitespace-nowrap dark:text-white">
+                    এনআইডি টু টিন সার্টিফিকেট 50 টাকা
+                </th>
+                <td class="px-6 py-4 text-[17px]">
+                    এনআইডি
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    2231323
+                </td>
+                <td class="px-6 py-4 text-[17px]">
+                    22-02-2024
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium bg-[#27AE60] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="font-medium bg-[#e74c3c] px-[12px] py-[8px] text-[18px] text-white rounded-[4px]  dark:text-blue-500 hover:underline"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                    </section>
+                 <!-- --------------------------জন্ম নিবন্ধন মেইক------------ -->
+               </section>
+             
+             <!-- ------------------------------first tab--------------------- -->
+        </section>
+        <!-- ---------------------------right side---------------------- -->
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
